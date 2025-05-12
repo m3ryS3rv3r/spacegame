@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space Explorer</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+        <link rel="icon" href="img/logo.png" type="image/png">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body onload="home()">
+
+        <!-- header del sito con logo e nome -->
+        <header class="header">
+            <div class="logo">
+                <button onclick="location.reload()">
+                    <img src="img/logo.png" alt="Logo del sito" style="height: 60px; width: 60px;">
+                    <span class="site-name">Space Explorer</span>    
+                </button>
+            </div>
+            <div id="cost_img">
+                <button onclick="img_costellazioni()" id="cost">
+                    <img src="img/constellation.png" alt="">
+                </button>
+            </div>
+        </header>
+                    
+        <!-- pagina della home -->
+        <div id="home">
+            <label>
+                Esplora lo spazio giocando!
+            </label> <br>
+            <button onclick="gioca()" class="boton-elegante">
+                <label class="inizia" style="font-size: 30px;">Inizia ora</label>
+            </button>
+        </div>
+
+        <!-- pagina con le scelte -->
+        <div id="gioca">
+            <label>
+                Cosa vuoi fare?
+            </label> <br>
+
+            <div id="container">
+                <button onclick="gioco_scelto(1)">
+                    <div id="animali_icon" class="card">
+                        Conosci i pianeti <br>
+                        <img src="img/conosci.png" alt="">
+                    </div>    
+                </button>
+                
+                <button onclick="gioco_scelto(2)">
+                    <div id="emozioni_icon" class="card">
+                        Quiz sul sistema solare<br>
+                        <img src="img/quiz.png" alt="">
+                    </div>
+                </button>
+                
+                <button onclick="gioco_scelto(3)">
+                    <div id="ordina_icon" class="card">
+                        Disegna e impara le costellazioni <br>
+                        <img src="img/constellation.png" alt="">
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        
+        <!-- pagina per la scelta del personaggio -->
+        <div id="personaggi">
+            <label>
+                Scegli il tuo personaggio
+            </label> <br>
+            <button id="canva1">
+                <canvas id="pers1" height="180" width="180"></canvas>
+            </button>
+            <button id="canva2">
+                <canvas id="pers2" height="180" width="180"></canvas>
+            </button>
+            <button id="canva3">
+                <canvas id="pers3" height="180" width="180"></canvas>
+            </button>
+            <button id="canva4">
+                <canvas id="pers4" height="180" width="180"></canvas>
+            </button>
+        </div>
+
+
+        <!-- pagina del primo/secondo gioco -->
+        <div id="giochino_carino_carino">
+            <div id="pianeti">
+                <canvas id="pianeta1"></canvas>
+                <canvas id="pianeta2"></canvas>
+                <canvas id="pianeta3"></canvas>
+                <canvas id="pianeta4"></canvas>
+                <canvas id="pianeta5"></canvas>
+                <canvas id="pianeta6"></canvas>
+                <canvas id="pianeta7"></canvas>
+                <canvas id="pianeta8"></canvas>
+                <canvas id="pianeta9"></canvas>
+            </div>
+            <canvas id="person"></canvas>
+        </div>
+
+        <!-- pagina del terzo gioco -->
+        <div id="secondo_giochino">
+            <canvas id="stelline" width="1520" height="647"></canvas>
+        </div>
+
+    </body>
+</html>

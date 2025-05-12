@@ -1,0 +1,227 @@
+/* stili base per la pagina */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu";
+    color: white;
+    user-select: none;
+}
+body {
+    font-style: oblique;
+    background: url("img/sfondo_sito.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+button {
+    cursor: pointer;
+}
+
+/* stili dell'header */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.9);
+    gap: 10px;
+    justify-content: space-between;
+}
+#cost_img img {
+    width: 60px;
+    height: 60px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.header button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.logo span {
+    font-size: 1.9em;
+    color: white;
+}
+.header img {
+    width: 30px;
+    height: auto;
+}
+.active-button {
+    font-weight: bold;
+}
+span {
+    margin-left: 10px;
+}
+
+/* stili della home  */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3%;
+    overflow: hidden;
+}
+#home label {
+    font-size: 150px;
+    text-shadow: 
+    0 0 25px black,
+    0 0 30px black,
+    0 0 35px black;
+}
+.boton-elegante {
+    position: relative;
+    padding: 15px;
+    border: 2px solid #2c2c2c;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    font-weight: bold;
+    margin-top: 5%;
+    height: 65px;
+}
+.boton-elegante::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: scale(0);
+    transition: transform 0.5s ease;
+}
+.boton-elegante:hover::after {
+    transform: scale(4);
+}
+.boton-elegante:hover {
+    border-color: #666666;
+    background: #292929;
+}
+
+/* stili del div giochi e dei giochi */
+#gioca, #personaggi {
+    padding: 20px 50px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; 
+    border-radius: 15px;
+}
+#container button {
+    flex: 0 1 calc(33.33% - 20px);
+    margin-top: -1%;
+}
+#personaggi {
+    margin-left: -2%;
+}
+#personaggi button {
+    flex: 0 1 calc(25% - 60px); 
+    margin-left: 3%;
+    margin-top: 3%;
+}
+#container, #personaggi {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    width: 100%;
+    margin-top: 6%;
+}
+#container button, #personaggi button {
+    box-sizing: border-box; 
+    background-color: #aa0eed; 
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer;
+    color: white;
+    font-size: 1.4em;
+    font-style: oblique;
+    font-weight: bold;
+    text-shadow: 
+    0 0 5px black,
+    0 0 10px black,
+    0 0 15px black;
+}
+#container button:hover, #personaggi button:hover {
+    transform: scale(1.05);
+}
+#container button img {
+    width: 40%;
+    height: auto;
+    margin-top: 10px;
+}
+#gioca label, #personaggi label {
+    font-size: 110px;
+    text-shadow: 
+    0 0 25px black,
+    0 0 30px black,
+    0 0 35px black;
+    color: white;
+}
+.card {
+    margin-top: 2%;
+}
+#gioca {
+    margin-top: 5%;
+}
+#pianeti {
+    width: 100%;
+    position: relative;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10%;
+    margin-left: -19%;
+    z-index: 1;
+}
+#pianeta1 {
+    margin-right: 30px;
+}
+#giochino_carino_carino {
+    /* non so secondo quale magia ma volevo evitare che la pagina si espandesse e (oltre non aver fatto ciò che volevo) mi ha tolto la parte di
+    sole che andava a finire sopra l'header quindi top */
+    overflow: hidden;
+}
+#pianeti canvas {
+    box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.181); 
+    border-radius: 50%;
+}
+#secondo_giochino {
+    margin-top: -38px;
+}
+#stelline {
+    background-color: transparent;
+}
+#person {
+    margin-top: -100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 10; 
+}
+
+/* mi sono andata a cercare tramite gli strumenti da sviluppatore di chrome qual è il css della time bar per modificarlo e renderlo più visibile */
+.swal2-timer-progress-bar {
+    height: 10px;
+    background: #119ff2;
+}
